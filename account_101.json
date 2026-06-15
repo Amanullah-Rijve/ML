@@ -1,0 +1,15 @@
+{
+    "acc_num": 101,
+    "name": "Karim",
+    "balance": 5500,
+    "transactions": [
+        {
+            "type": "deposit",
+            "amount": 1000
+        },
+        {
+            "type": "withdraw",
+            "amount": 500
+        }
+    ]
+}
