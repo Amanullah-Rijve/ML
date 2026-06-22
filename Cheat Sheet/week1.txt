@@ -1,0 +1,57 @@
+CLASS & OBJECT
+──────────────
+class MyClass:
+    class_var = "shared"          # class variable
+    
+    def __init__(self, x):
+        self.x = x                # instance variable
+
+obj = MyClass(10)
+
+INHERITANCE
+───────────
+class Child(Parent):
+    def __init__(self):
+        super().__init__()        # parent constructor call
+
+ENCAPSULATION
+─────────────
+self.public       # সবাই access করতে পারে
+self._protected   # convention, বাইরে থেকে avoid করো
+self.__private    # name mangling, বাইরে থেকে access কঠিন
+
+@property
+def x(self): return self.__x      # getter
+
+@x.setter  
+def x(self, val): self.__x = val  # setter
+
+EXCEPTION HANDLING
+──────────────────
+try:
+    risky code
+except SpecificError as e:
+    handle
+else:
+    no error হলে
+finally:
+    সবসময়
+
+class MyError(Exception):
+    def __init__(self, msg):
+        super().__init__(msg)
+
+raise MyError("message")
+
+FILE HANDLING
+─────────────
+with open("file.json", "w") as f:
+    json.dump(data, f, indent=4)   # save
+
+with open("file.json", "r") as f:
+    data = json.load(f)            # load
+
+@classmethod
+def load(cls, id):
+    # file থেকে object বানানো
+    return cls(data["x"], data["y"])
