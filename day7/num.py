@@ -49,13 +49,14 @@ import numpy as np
 
 # indentity matrix 
 
-arr5 = np.eye(3) # diagonal gula 1 hbe baki sob 0
-print(arr5)
+# arr5 = np.eye(3) # diagonal gula 1 hbe baki sob 0
+# print(arr5)
 '''
 [[1. 0. 0.]
  [0. 1. 0.]
  [0. 0. 1.]]
 '''
+
 
 
 
